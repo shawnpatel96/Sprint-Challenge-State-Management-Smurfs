@@ -11,7 +11,8 @@ export const reducer = (state=initialState, action) =>{
         case "FETCHING_DATA":
             return{
                 ...state,
-                isFetchingData: true
+                isFetchingData: true,
+                id: Date.now()
             }
 
         
@@ -20,6 +21,7 @@ export const reducer = (state=initialState, action) =>{
                 ...state,
                 smurfs: action.payload,
                 isFetchingData: false,
+                id: Date.now()
             }
         case "FETCHING_FAIL":
             return{
@@ -31,13 +33,15 @@ export const reducer = (state=initialState, action) =>{
             return{
                 ...state,
                 isFetchingData:true,
-                error:""
+                error:"",
+                id: Date.now()
             }
         case "ADDING_SMURF_SUCCESS":
             return{
                 ...state,
                 isFetchingData:action.payload,
-                error:""
+                error:"",
+                id: Date.now()
             }
         case "ADDING_SMURF_FAIL":
             return{
