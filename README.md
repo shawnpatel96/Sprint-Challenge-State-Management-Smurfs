@@ -23,10 +23,26 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+aims to solve the problem of prop drilling. context api proves data to all levels of components
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+    action uses dispatch to send payloads of information from the app to the store, reducer manages state. redux allows us to change data in the UI via actions which will then change state in the reducer. this is the only way to change data
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+application state is the global state is currently in, which is rendered in the DOM. 
+component state is the local state of a component, cannot be seen on the DOM, the store can hold application state including component state which can be accessed anytwhere within the app
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+this ones a bit confusing still but what I understand is that redux actions are synchronous and redux-thunk introduces a middleware that is the middleman between an action being dispatched to action reaching the reducer. basicaly the middleware will throw out any object and accept functions. might be vice versa....?
+
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+currently? probably redux as I have more than one day of experience vs context api. I need to read more about both to determine which my application would use.
 
 ## Project Set Up
 
